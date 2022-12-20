@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progress_notes",
+  "info": {
+    "singularName": "progress-note",
+    "pluralName": "progress-notes",
+    "displayName": "progress-note"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "progress": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::progress.progress",
+      "inversedBy": "progress_note"
+    },
+    "abstract": {
+      "type": "string"
+    },
+    "chapter_one": {
+      "type": "string"
+    },
+    "chapter_two": {
+      "type": "string"
+    },
+    "chapter_three": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    }
+  }
+}

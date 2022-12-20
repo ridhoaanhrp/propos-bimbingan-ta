@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progress_values",
+  "info": {
+    "singularName": "progress-value",
+    "pluralName": "progress-values",
+    "displayName": "progress-value"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "progress": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::progress.progress",
+      "inversedBy": "progress_value"
+    },
+    "abstract": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "chapter_one": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "chapter_two": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "chapter_three": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "reference": {
+      "type": "decimal",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    }
+  }
+}

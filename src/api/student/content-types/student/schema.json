@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "richtext",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "private": true
+    },
+    "guidance_progresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guidance-progress.guidance-progress",
+      "mappedBy": "student"
+    },
+    "advisors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lecturer.lecturer",
+      "inversedBy": "students"
+    }
+  }
+}
