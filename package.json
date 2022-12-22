@@ -14,7 +14,8 @@
     "@strapi/plugin-users-permissions": "4.5.4",
     "@strapi/strapi": "4.5.4",
     "bcrypt": "^5.1.0",
-    "pg": "8.6.0"
+    "pg": "8.6.0",
+    "pm2": "^5.2.2"
   },
   "author": {
     "name": "A Strapi developer"
